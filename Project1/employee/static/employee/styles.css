@@ -1,0 +1,80 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Header */
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+/* Table Styles */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+table th {
+    background-color: rgb(116, 100, 100);
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #e6f7ff;
+}
+
+/* Buttons and Links */
+a {
+    text-decoration: none;
+    color: rgb(116, 100, 100);
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: #d32f2f;
+}
+
+/* Add Employee Button */
+a[href*='employee_create'] {
+    display: inline-block;
+    background-color: rgb(116, 100, 100);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+a[href*='employee_create']:hover {
+    background-color: rgb(116, 100, 100);
+}

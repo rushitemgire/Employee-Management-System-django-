@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee List</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'employee/styles.css' %}">
+</head>
+<body>
+    <h1>Employees</h1>
+    <a href="{% url 'employee_create' %}">Add Employee</a>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>Position</th>
+            <th>Actions</th>
+        </tr>
+        {% for employee in employees %}
+        <tr>
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.email }}</td>
+            <td>{{ employee.contact }}</td>
+            <td>{{ employee.position }}</td>
+            <td>
+                <a href="{% url 'employee_update' employee.id %}">Edit</a>
+                <form action="{% url 'employee_delete' employee.id %}" method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
